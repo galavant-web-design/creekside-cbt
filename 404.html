@@ -3,6 +3,11 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>
+    // GitHub serves this page at whatever URL was missed, so resolve links
+    // from the site root: the repo path on github.io, or "/" on the custom domain.
+    document.write('<base href="' + (location.hostname.endsWith('github.io') ? '/creekside-cbt/' : '/') + '">');
+  </script>
   <title>Page not found | Creekside CBT</title>
   <meta name="description" content="Page not found.">
   <link rel="canonical" href="https://creeksidecognitivebehavioraltherapy.org/404.html">
@@ -12,18 +17,18 @@
   <meta property="og:description" content="Page not found.">
   <meta property="og:url" content="https://creeksidecognitivebehavioraltherapy.org/404.html">
   <meta property="og:image" content="https://creeksidecognitivebehavioraltherapy.org/images/flatirons-hero-1200.jpg">
-  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,500;0,600;1,500&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/css/styles.css">
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
 
   <header class="site-header">
     <div class="container header-inner">
-      <a class="brand" href="/" aria-label="Creekside CBT, home">
+      <a class="brand" href="./" aria-label="Creekside CBT, home">
         <svg class="brand-mark" viewBox="0 0 48 48" aria-hidden="true">
           <circle cx="24" cy="24" r="24" fill="currentColor"/>
           <path d="M9 31 17 13l4 18Z M17 31 26 9l6 22Z M28 31l6-12 4 12Z" fill="#F6F1E7"/>
@@ -42,10 +47,10 @@
 
       <nav class="site-nav" id="site-menu" aria-label="Main">
         <ul>
-          <li><a href="/cbt-practice/">CBT Practice</a></li>
-          <li><a href="/research/">Research</a></li>
-          <li><a href="/podcasts/">Podcasts</a></li>
-          <li><a href="/retreats/">Retreats</a></li>
+          <li><a href="cbt-practice/">CBT Practice</a></li>
+          <li><a href="research/">Research</a></li>
+          <li><a href="podcasts/">Podcasts</a></li>
+          <li><a href="retreats/">Retreats</a></li>
         </ul>
         <a class="button button-primary" href="mailto:jmagidson@creeksidecbt.org?subject=Intake%20appointment%20request">Make an appointment</a>
       </nav>
@@ -53,7 +58,7 @@
   </header>
 
   <main id="main">
-    <header class="page-hero" style="--page-image: url('/images/mountain-creek.jpg')">
+    <header class="page-hero" style="--page-image: url('images/mountain-creek.jpg')">
       <div class="container">
         <h1>Page not found</h1>
       </div>
@@ -62,7 +67,7 @@
     <section class="section">
       <div class="container coming-soon">
         <p>This trail doesn't go anywhere.</p>
-        <a class="button button-primary" href="/">Back to the home page</a>
+        <a class="button button-primary" href="./">Back to the home page</a>
       </div>
     </section>
   </main>
@@ -76,6 +81,6 @@
     </div>
   </footer>
 
-  <script src="/js/nav.js" defer></script>
+  <script src="js/nav.js" defer></script>
 </body>
 </html>

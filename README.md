@@ -24,8 +24,10 @@ CNAME                 Custom domain for GitHub Pages
 Each page repeats the same header and footer. If you change the navigation, the footer, or the
 appointment email, update every `index.html` and `404.html`.
 
-Links and assets use root-relative paths (`/css/styles.css`), so the site has to be served from the
-domain root. That works with the custom domain or with the local server below.
+Links and assets use relative paths (`css/styles.css` on the home page, `../css/styles.css` one folder
+down), so the site works both at https://galavant-web-design.github.io/creekside-cbt/ and on the custom
+domain. Keep it that way: a leading `/` breaks the github.io URL. The exception is `404.html`, which
+GitHub serves at any depth. It sets a `<base>` from the hostname instead.
 
 ## Run locally
 
