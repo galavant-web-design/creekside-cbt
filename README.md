@@ -18,7 +18,6 @@ css/styles.css        All styles; colors and fonts are tokens at the top
 js/nav.js             Mobile menu toggle
 images/               Photos (Pexels placeholders, plus Jess's portrait)
 favicon.svg           Logo mark
-CNAME                 Custom domain for GitHub Pages
 ```
 
 Each page repeats the same header and footer. If you change the navigation, the footer, or the
@@ -46,5 +45,6 @@ Update the photo credits in the footer once the Pexels images are gone.
 ## Deploying
 
 1. Push to GitHub, then go to Settings → Pages and set **Deploy from a branch** to `main` / root.
-2. The `CNAME` file sets the custom domain. Point the domain's DNS at GitHub Pages
+2. When it's time to switch domains, add `creeksidecognitivebehavioraltherapy.org` as the custom
+   domain under Settings → Pages (this creates a `CNAME` file). Point the domain's DNS at GitHub Pages
    (see GitHub's "Managing a custom domain" docs), then turn on **Enforce HTTPS**.
