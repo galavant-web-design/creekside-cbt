@@ -1,0 +1,48 @@
+# Creekside CBT
+
+Website for Creekside Cognitive Behavioral Therapy, LLC (Jessica F. Magidson, PhD), Boulder, Colorado.
+
+Plain HTML, CSS, and JS. There's no framework and no build step. It's deployed with GitHub Pages at
+https://creeksidecognitivebehavioraltherapy.org.
+
+## Structure
+
+```
+index.html            Home
+cbt-practice/         About, credentials, logistics
+research/             Resources (articles)
+podcasts/             Coming soon
+retreats/             Coming soon
+404.html              GitHub Pages "not found" page
+css/styles.css        All styles; colors and fonts are tokens at the top
+js/nav.js             Mobile menu toggle
+images/               Photos (Pexels placeholders, plus Jess's portrait)
+favicon.svg           Logo mark
+CNAME                 Custom domain for GitHub Pages
+```
+
+Each page repeats the same header and footer. If you change the navigation, the footer, or the
+appointment email, update every `index.html` and `404.html`.
+
+Links and assets use root-relative paths (`/css/styles.css`), so the site has to be served from the
+domain root. That works with the custom domain or with the local server below.
+
+## Run locally
+
+```bash
+python3 -m http.server 8421
+```
+
+Then open http://localhost:8421.
+
+## Swapping in Jess's photos
+
+Replace the files in `images/` and keep the same names, or update the references. Each photo has a
+large version (used for page banners, about 1600–2400px wide) and an `-800` version (used for cards).
+Update the photo credits in the footer once the Pexels images are gone.
+
+## Deploying
+
+1. Push to GitHub, then go to Settings → Pages and set **Deploy from a branch** to `main` / root.
+2. The `CNAME` file sets the custom domain. Point the domain's DNS at GitHub Pages
+   (see GitHub's "Managing a custom domain" docs), then turn on **Enforce HTTPS**.
