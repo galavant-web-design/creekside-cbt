@@ -11,7 +11,7 @@ https://creeksidecognitivebehavioraltherapy.org.
 index.html            Home
 cbt-practice/         About, credentials, logistics
 research/             Resources (articles)
-podcasts/             Coming soon
+podcasts/             Recommended episodes
 retreats/             Coming soon
 404.html              GitHub Pages "not found" page
 css/styles.css        All styles; colors and fonts are tokens at the top

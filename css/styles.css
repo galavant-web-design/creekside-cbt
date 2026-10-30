@@ -392,6 +392,61 @@ a:hover { color: var(--color-sandstone-dark); }
 .resource:hover h3 a { color: var(--color-sandstone-dark); }
 .resource-meta { margin: 0; font-size: 0.95rem; color: var(--color-muted); }
 
+/* ---------- Podcasts ---------- */
+
+.episode-list {
+  display: grid;
+  gap: 1.5rem;
+  max-width: 60rem;
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
+}
+.episode {
+  display: grid;
+  overflow: hidden;
+  background: var(--color-paper);
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius);
+}
+.episode img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  object-position: 50% 30%;
+}
+.episode-body {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 1.75rem;
+}
+/* Photo beside the text on wider screens, with the text column twice as wide */
+@media (min-width: 40rem) {
+  .episode { grid-template-columns: 1fr 2fr; }
+  /* Fill the card's height without letting the photo's own height set it */
+  .episode img { aspect-ratio: auto; height: 0; min-height: 100%; }
+}
+.episode-show {
+  margin-bottom: 0.5rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-sandstone-dark);
+}
+.episode h3 { font-size: 1.4rem; color: var(--color-forest); }
+.episode-summary { color: var(--color-muted); }
+.episode-meta { margin-bottom: 1.25rem; font-size: 0.9rem; color: var(--color-muted); }
+.episode .button { margin-top: auto; }
+.button-icon {
+  width: 0.9em;
+  height: 0.9em;
+  margin-right: 0.4em;
+  vertical-align: -0.05em;
+  fill: currentColor;
+}
+
 /* ---------- Coming soon ---------- */
 
 .coming-soon {
