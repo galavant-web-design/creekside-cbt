@@ -8,8 +8,8 @@ https://creeksidecognitivebehavioraltherapy.org.
 ## Structure
 
 ```
-index.html            Home
-cbt-practice/         About, credentials, logistics
+index.html            About (home): overall bio, research and practice
+cbt-practice/         CBT practice: credentials, logistics
 research/             Resources (articles)
 podcasts/             Recommended episodes
 retreats/             Coming soon
