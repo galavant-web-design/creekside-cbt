@@ -292,12 +292,6 @@ a:hover { color: var(--color-sandstone-dark); }
   background: rgb(246 241 231 / 0.35);
 }
 .page-hero-brand .eyebrow { margin-bottom: 0.4rem; }
-.eyebrow-brand { color: #fff; }
-
-@media (max-width: 40rem) {
-  .eyebrow-brand { display: block; }
-  .eyebrow-sep { display: none; }
-}
 .page-hero h1 { margin: 0; font-size: clamp(2.5rem, 6vw, 4rem); }
 .page-hero p:last-child { max-width: 38rem; margin: 1rem 0 0; font-size: 1.15rem; }
 
