@@ -10,8 +10,8 @@ https://creeksidecognitivebehavioraltherapy.org.
 ```
 index.html            About (home): overall bio, research and practice
 cbt-practice/         CBT practice: credentials, logistics
-research/             Resources (articles)
-podcasts/             Recommended episodes
+research/             Coming soon
+media/                Articles and recommended episodes
 retreats/             Coming soon
 404.html              GitHub Pages "not found" page
 css/styles.css        All styles; colors and fonts are tokens at the top
