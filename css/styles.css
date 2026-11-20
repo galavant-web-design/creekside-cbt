@@ -305,6 +305,7 @@ a:hover { color: var(--color-sandstone-dark); }
 .prose { max-width: var(--measure); }
 .prose h2 { margin-top: 2.5rem; }
 .prose h2:first-child { margin-top: 0; }
+.prose h3 { margin-top: 2.25rem; font-size: 1.4rem; color: var(--color-forest); }
 
 /* Two-column layout: image beside text */
 .media-split {
