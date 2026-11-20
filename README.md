@@ -3,7 +3,7 @@
 Website for Creekside Cognitive Behavioral Therapy, LLC (Jessica F. Magidson, PhD), Boulder, Colorado.
 
 Plain HTML, CSS, and JS. There's no framework and no build step. It's deployed with GitHub Pages at
-https://creeksidecognitivebehavioraltherapy.org.
+https://jessicamagidson.com.
 
 ## Structure
 
@@ -17,7 +17,10 @@ retreats/             Coming soon
 css/styles.css        All styles; colors and fonts are tokens at the top
 js/nav.js             Mobile menu toggle
 images/               Photos (Pexels placeholders, plus Jess's portrait)
-favicon.svg           Logo mark
+favicon.svg           Logo mark (plus favicon-32.png and apple-touch-icon.png)
+tools/                Share-card source and the script that renders it (not linked from the site)
+robots.txt, sitemap.xml
+CNAME                 Custom domain for GitHub Pages
 ```
 
 Each page repeats the same header and footer. If you change the navigation, the footer, or the
@@ -40,11 +43,25 @@ Then open http://localhost:8421.
 
 Replace the files in `images/` and keep the same names, or update the references. Each photo has a
 large version (used for page banners, about 1600–2400px wide) and an `-800` version (used for cards).
-Update the photo credits in the footer once the Pexels images are gone.
+Update the photo credits in the footer once the Pexels images are gone, and re-render the share card
+(see "Search and link previews" below) if the Flatirons photo changes.
 
 ## Deploying
 
 1. Push to GitHub, then go to Settings → Pages and set **Deploy from a branch** to `main` / root.
-2. When it's time to switch domains, add `creeksidecognitivebehavioraltherapy.org` as the custom
-   domain under Settings → Pages (this creates a `CNAME` file). Point the domain's DNS at GitHub Pages
-   (see GitHub's "Managing a custom domain" docs), then turn on **Enforce HTTPS**.
+2. The custom domain is `jessicamagidson.com`, set under Settings → Pages (that's what the `CNAME`
+   file records), with **Enforce HTTPS** on.
+
+## Search and link previews
+
+Each page's `<head>` has a title, description, canonical URL, Open Graph and Twitter tags. All pages
+share one 1200×630 preview image, `images/share-card.jpg`. The home page also has JSON-LD structured
+data describing Jess and the practice.
+
+- If you add a page, copy the head tags from a sibling page, update the title, description and URLs,
+  and add it to `sitemap.xml`.
+- To change the share card (new photo or text), edit `tools/share-card.html`, then run
+  `tools/render-share-card.sh` (macOS with Google Chrome). It also regenerates the PNG icons from
+  `favicon.svg`.
+- Preview checkers cache, so after changing the card use LinkedIn Post Inspector or the Facebook
+  Sharing Debugger to refresh it.
