@@ -521,9 +521,14 @@ a:hover { color: var(--color-sandstone-dark); }
 .site-footer a { color: #fff; }
 .site-footer a:hover { color: var(--color-gold); }
 .credits {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0.5rem 2rem;
   flex-basis: 100%;
   padding-top: 1rem;
   border-top: 1px solid rgb(255 255 255 / 0.15);
   font-size: 0.8rem;
   color: rgb(255 255 255 / 0.6);
 }
+.site-credit { margin-left: auto; white-space: nowrap; }
